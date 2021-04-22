@@ -26,11 +26,11 @@ export class DashPageComponent implements OnInit {
 
 
   Inc() {
-     this.inc = this.c1+1;
+     this.c1 = this.c1+1;
   }
 
   Dec(){
-    this.dec = this.c1 -1;
+    this.c1 = this.c1 -1;
   }
 }
 
