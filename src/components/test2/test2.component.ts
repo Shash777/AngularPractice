@@ -10,6 +10,8 @@ export class Test2Component implements OnInit {
 
   constructor() { }
 
+
+  name = "text"
   myForm!: FormGroup;
 
   ngOnInit() {

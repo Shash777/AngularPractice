@@ -1,0 +1,8 @@
+ngONchanges
+ngONinit
+ngDocheck
+ngAfterContentInit
+ngAfterContentChecked()
+ngAfterViewInit()
+ngAfterViewCHecked()
+ngDestroy()
