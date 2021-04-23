@@ -10,6 +10,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { FcpComponent } from '../components/fcp/fcp.component';
 import { LogPageComponent } from 'src/components/log-page/log-page.component';
 import { DashPageComponent } from 'src/components/dash-page/dash-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import { MatToolbarModule }  from '@angular/material/toolbar'
 
 
 const routes: Routes = [
@@ -29,6 +32,7 @@ const routes: Routes = [
     LogPageComponent,
     DashPageComponent,
 
+
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,13 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatToolbarModule
+
+
+
 
   ],
   providers: [],
