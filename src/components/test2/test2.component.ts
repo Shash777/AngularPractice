@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup,  FormsModule } from '@angular/forms';
 
 @Component({
@@ -12,7 +12,8 @@ export class Test2Component implements OnInit {
 
 
   name = "text"
-  myForm!: FormGroup;
+  myForm : any;
+
 
   ngOnInit() {
     this.myForm = new FormGroup({
@@ -23,13 +24,22 @@ export class Test2Component implements OnInit {
     });
   }
 
+  @Output() newItemEvent = new EventEmitter();
+
   onSubmit(form: FormGroup) {
     console.log('Valid?', form.valid); // true or false
     console.log('Name', form.value.name);
     console.log('Email', form.value.email);
     console.log('Message', form.value.message);
 
+
     localStorage.setItem('form-data', JSON.stringify(this.myForm.value));
+  }
+  formDisp(){
+    let formd = this.myForm.value
+    console.log(formd)
+    this.newItemEvent.emit(formd)
+
   }
 
 }
